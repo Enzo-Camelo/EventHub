@@ -1,53 +1,19 @@
-# Dependency directories
+# Dependencies
 node_modules/
-jspm_packages/
-
-# Debug logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
-.pnpm-debug.log*
 
 # Environment variables
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-*.env.bak
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Editor/IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-.project
-.classpath
-.settings/
+# Logs
+npm-debug.log*
 
 # Test coverage
 coverage/
-*.lcov
 
-# Build/Dist
-dist/
-build/
-.next/
-.serverless/
-out/
-
-# Other
+# Uploads
 uploads/
-.npm
-.eslintcache
-.stylelintcache
-.cache/
-.parcel-cache/
-.turbo/
-.vercel
-.netlify
+
+# Editor/OS files
+.vscode/
+.DS_Store
+Thumbs.db
