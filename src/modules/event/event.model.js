@@ -36,4 +36,5 @@ const Event = sequelize.define('Event', {
   timestamps: true,
 });
 
+export { Event };
 export default Event;

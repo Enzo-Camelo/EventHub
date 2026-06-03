@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { getHealth } from '../health.service.js';
+
 describe('Health Service', () => {
   it('deve retornar status OK quando o serviço está saudável', () => {
     const result = getHealth();

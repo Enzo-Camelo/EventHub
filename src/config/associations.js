@@ -1,9 +1,3 @@
-/**
- * Arquivo central de associações entre os models do Sequelize.
- * Importe este arquivo uma única vez na inicialização da aplicação (app.js ou server.js).
- * Manter as associações separadas dos models evita dependências circulares
- * e facilita o mock dos models nos testes.
- */
 import User from '../modules/user/user.model.js';
 import Event from '../modules/event/event.model.js';
 import Category from '../modules/category/category.model.js';
