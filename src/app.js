@@ -5,6 +5,7 @@ import logger from 'morgan';
 import session from 'express-session';
 import flash from 'connect-flash';
 import expressLayouts from 'express-ejs-layouts';
+import favoriteRoutes from './modules/favorite/favorite.routes.js';
 
 const app = express();
 
@@ -23,7 +24,7 @@ app.use(express.static(path.join(process.cwd(), 'src/public')));
 
 // Sessão + Flash
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || 'test-secret',
   resave: false,
   saveUninitialized: false,
   cookie: { maxAge: 1000 * 60 * 60 * 24 }
@@ -40,6 +41,7 @@ app.use((req, res, next) => {
 
 // Rotas
 app.get('/', (req, res) => res.render('index', { title: 'EventHub-TDD' }));
+app.use('/favorites', favoriteRoutes);
 
 // 404
 app.use((req, res) => res.status(404).render('error'));
