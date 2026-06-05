@@ -6,6 +6,7 @@ import session from 'express-session';
 import flash from 'connect-flash';
 import expressLayouts from 'express-ejs-layouts';
 import favoriteRoutes from './modules/favorite/favorite.routes.js';
+import eventRoutes from './modules/event/event.routes.js';
 
 const app = express();
 
@@ -42,6 +43,7 @@ app.use((req, res, next) => {
 // Rotas
 app.get('/', (req, res) => res.render('index', { title: 'EventHub-TDD' }));
 app.use('/favorites', favoriteRoutes);
+app.use('/events', eventRoutes);
 
 // 404
 app.use((req, res) => res.status(404).render('error'));
